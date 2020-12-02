@@ -12,7 +12,7 @@ app.use(parser.urlencoded({ extended: false }));
 // create application/json parser
 app.use(parser.json());
 
-const postsHardlers = users({ axios });
+const postsHardlers = posts({ axios });
 
 app.post("/", authenticate, postsHardlers.post);
 
